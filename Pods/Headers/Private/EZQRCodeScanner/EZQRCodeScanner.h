@@ -1,0 +1,1 @@
+../../../EZQRCodeScanner/EZQRCodeScanner/EZQRCodeScanner/Controller/EZQRCodeScanner.h

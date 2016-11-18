@@ -1,0 +1,1 @@
+../../../EZQRCodeScanner/EZQRCodeScanner/EZQRCodeScanner/View/EZScanLine.h

@@ -1,0 +1,74 @@
+//
+//  XiaoHuiBang.pch
+//  XiaoHuiBang
+//
+//  Created by 消汇邦 on 16/9/26.
+//  Copyright © 2016年 消汇邦. All rights reserved.
+//
+
+#ifndef XiaoHuiBang_pch
+#define XiaoHuiBang_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+/*---------------------------  输出 ---------------------------*/
+
+#ifdef DEBUG // 处于开发阶段
+#define KMLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define KMLog(...)
+#endif
+
+/*---------------------------  基础坐标 ---------------------------*/
+
+#define My_Screen_Width [[UIScreen mainScreen] bounds].size.width
+#define My_Screen_Height [[UIScreen mainScreen] bounds].size.height
+
+/*---------------------------常用的宏---------------------------*/
+
+#define APP_WINDOW [[[UIApplication sharedApplication] delegate] window]
+#define USER_D [NSUserDefaults standardUserDefaults]
+#define FILE_M [NSFileManager defaultManager]
+#define BUNDLE_ID [[NSBundle mainBundle] bundleIdentifier]
+
+/*----------------------常用的扩展以及全局类----------------------*/
+
+#ifdef __OBJC__
+
+#import "NSString+Extension.h"
+#import "MyTool.h"
+#import "AFHttpTool.h"
+#import "RCDRCIMDataSource.h"
+#import "StitchingImage.h"
+
+#endif
+
+/*-------------------------接口-------------------------*/
+
+#define XBaseURL @"http://115.28.6.7/rongyun.php/Home/"    //基础接口
+#define XLoginURL @"User/login"    //登录
+#define XSendCodeURL @"User/dx_verify"    //发送验证码
+#define XRegistURL @"User/register"    //注册
+#define XUserMessageURL @"User/user_info"    //用户信息
+#define XUserQRCodeURL @"user/user_code"    //个人二维码
+#define XUploadPictureURL @"user/head_img"    //上传头像
+#define XUserVerifyPswURL @"user/password_verify"    //用户验证
+#define XUserInformationModifyURL @"user/user_info_update"    //用户信息修改
+#define XUserFriendURL @"User/friend"    //用户好友
+#define XUserQueryFriendsURL @"User/user_sel"    //查询 
+#define XUserAddFriendsURL @"User/friend_add"    //添加好友
+#define XUserAddOKFriendsURL @"User/friend_add_Ok"    //确认添加好友
+#define XCreateAGroupChatURL @"group/group_create"    //创建群聊
+#define XGroupInfoURL @"group/group_info"    //群信息
+#define XGroupQRCodeURL @"group/group_code"    //群组二维码
+#define XGroupUserInfoURL @"group/group_user"    //群成员信息
+#define XGroupNameEditURL @"group/group_edit_name"    //修改群信息
+#define XDelGroupURL @"group/group_del"    //解散群组
+#define XFriendsAddURL @"user/friend_add"    //添加朋友
+#define XAddGroupMembersURL @"group/groupmain_user_add"    //添加群成员
+#define XOutGroupMembersURL @"group/groupmain_out"    //踢出群成员
+#define XOutGroupUserURL @"group/group_out"    //退出群
+#define XMyGroupListurl @"group/mygroup"    //查看我所在的群
+
+#endif /* XiaoHuiBang_pch */
